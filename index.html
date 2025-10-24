@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Enhanced Weather App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Enhanced Weather App</h1>
+        <div class="controls">
+          <button id="detectBtn" title="Detect my location">Use my location</button>
+          <div class="unit-toggle">
+            <label class="switch">
+              <input id="unitToggle" type="checkbox" />
+              <span class="slider"></span>
+            </label>
+            <span id="unitLabel">°C</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="search">
+        <form id="searchForm">
+          <input id="cityInput" placeholder="Enter city name" aria-label="City name" />
+          <button type="submit">Search</button>
+        </form>
+        <div id="history" class="history"></div>
+      </section>
+
+      <section id="weather" class="weather hidden">
+        <div class="current">
+          <div class="left">
+            <h2 id="cityName">--</h2>
+            <p id="date">--</p>
+            <div class="temp">
+              <span id="temp">--</span>
+              <span id="tempUnit">°C</span>
+            </div>
+            <p id="desc">--</p>
+          </div>
+          <div class="right">
+            <img id="weatherIcon" alt="weather icon" />
+          </div>
+        </div>
+
+        <h3>5-Day Forecast</h3>
+        <div id="forecast" class="forecast"></div>
+      </section>
+
+      <footer>
+        <p>Data from OpenWeatherMap • Add your API key in <code>js/config.js</code></p>
+      </footer>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
